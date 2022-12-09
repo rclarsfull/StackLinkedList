@@ -38,15 +38,15 @@ bool testKammern(string in){
 
 int main()
 {
-//    Stack stack;
-//    stack.push('L');
-//    stack.push('a');
-//    stack.push('r');
-//    stack.push('s');
-//    cout << stack.size<<endl;
-//    cout << stack.pop() << stack.pop() <<stack.pop() <<stack.pop() <<stack.pop() <<endl;
-//    cout << stack.size<<endl;
+    Stack stack;
+    stack.push('L');
+    stack.push('a');
+    stack.push('r');
+    stack.push('s');
+    cout << stack.size<<endl;
+    cout << stack.pop() << stack.pop() <<stack.pop() <<stack.pop() <<stack.pop() <<endl;
+    cout << stack.size<<endl;
 
-    cout << boolalpha << testKammern("()[[sdfsdg]]");
+//    cout << boolalpha << testKammern("()[[sdfsdg]]");
     return 0;
 }

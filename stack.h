@@ -4,7 +4,7 @@
 
 class Stack
 {
-    Element first;
+    Element* first;
     Element* last;
 public:
     Stack();

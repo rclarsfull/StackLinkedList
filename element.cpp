@@ -30,7 +30,7 @@ void Element::setData(char newData)
     m_data = newData;
 }
 
-Element::Element(char data) :m_data(data)
+Element::Element(char data) :m_data(data),previus(nullptr),next(nullptr)
 {
 
 }

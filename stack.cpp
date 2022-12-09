@@ -1,19 +1,19 @@
 #include "stack.h"
 #include <iostream>
 
-Stack::Stack() :first(-1),size(0)
+Stack::Stack() :first(nullptr),size(0)
 {
-first.setPrevius(new Element(-1));
+
 }
 
 char Stack::pop()
 {
     char out=-1;
     if(size<1) std::cout << "Error Linked List out of bounds, returned -1" << std::endl;
-    if(first.data() != -1 && size>0){
+    if(first != nullptr && size>0){
         out=last->data();
-       if(last==&first){
-           first.setData(-1);
+       if(last==first){
+           first=nullptr;
            size--;
        }else{
        Element* temp=last;
@@ -28,11 +28,11 @@ char Stack::pop()
 
 void Stack::push(char c)
 {
-    if(first.data() == -1) {
-        first.setData(c);
-        last=&first;
-        first.setNext(last);
-        last->setPrevius(&first);
+    if(first == NULL) {
+        first=new Element(c);
+        last=first;
+        first->setNext(last);
+        last->setPrevius(first);
     }else{
         Element* next =new Element(c);
         last->setNext(next);
